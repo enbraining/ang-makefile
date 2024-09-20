@@ -7,16 +7,16 @@
 int main() {
     char *cwd, *first_cwd;
 
-    first_cwd = getcwd(NULL, 0);
-    printf("1. Current position : %s\n", first_cwd);
+    first_cwd = getcwd(NULL, BUFSIZ);
+    printf("1. Current directory : %s\n", first_cwd);
 
     chdir("han");
 
-    cwd = getcwd(NULL, 0);
-    printf("2. Current position : %s\n", cwd);
+    cwd = getcwd(NULL, BUFSIZ);
+    printf("2. Current directory : %s\n", cwd);
 
     chdir(first_cwd);
-    printf("3. Current position : %s\n", first_cwd);
+    printf("3. Current directory : %s\n", first_cwd);
 
     free(cwd);
     free(first_cwd);
