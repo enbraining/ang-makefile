@@ -6,7 +6,7 @@
 int main(){
     struct stat statbuf;
 
-    stat("linux.txt", &statbuf);
+    stat("ch3_1.c", &statbuf);
 
     printf("Inode = %d\n", (int) statbuf.st_ino);
     printf("Mode = %o\n", (unsigned int) statbuf.st_mode);

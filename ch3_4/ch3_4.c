@@ -6,14 +6,14 @@ int main(){
     struct stat statbuf;
     int kind;
 
-    stat("linux.txt", &statbuf);
+    stat("ch3_4.c", &statbuf);
 
     printf("Mode = %o\n", (unsigned int) statbuf.st_mode);
 
     if(S_ISLNK(statbuf.st_mode))
-        printf("linux.txt : Symbolic Link\n");
+        printf("ch3_4.c : Symbolic Link\n");
     if(S_ISDIR(statbuf.st_mode))
-        printf("linux.txt : Directory\n");
+        printf("ch3_4.c : Directory\n");
     if(S_ISREG(statbuf.st_mode))
-        printf("linux.txt : Regular File\n");
+        printf("ch3_4.c : Regular File\n");
 }
