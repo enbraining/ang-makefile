@@ -4,9 +4,8 @@
 
 int main(){
     struct stat statbuf;
-    int kind;
 
-    stat("ch3_4.c", &statbuf);
+    stat("ch3_4.txt", &statbuf);
 
     printf("Mode = %o\n", (unsigned int) statbuf.st_mode);
 

@@ -5,7 +5,7 @@
 int main(){
     struct stat statbuf;
 
-    stat("ch3_5.c", &statbuf);
+    stat("linux.txt", &statbuf);
     printf("Mode = %o\n", (unsigned int) statbuf.st_mode);
 
     if((statbuf.st_mode & S_IREAD) != 0)
