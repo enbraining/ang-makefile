@@ -16,5 +16,7 @@ int main(){
     statbuf.st_mode &= ~(S_IROTH);
 
     chmod("linux.txt", statbuf.st_mode);
+
+    stat("linux.txt", &statbuf);
     printf("2.Mode = %o\n", (unsigned int) statbuf.st_mode);
 }
