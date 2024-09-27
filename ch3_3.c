@@ -6,7 +6,7 @@ int main(){
     struct stat statbuf;
     int kind;
 
-    stat("ch3_3.txt", &statbuf);
+    stat("linux.txt", &statbuf);
 
     printf("Mode = %o\n", (unsigned int) statbuf.st_mode);
 
@@ -15,13 +15,13 @@ int main(){
 
     switch(kind){
         case S_IFLNK:
-            printf("ch3_3.c: Symbolic Link\n");
+            printf("linux.txt: Symbolic Link\n");
             break;
         case S_IFDIR:
-            printf("ch3_3.c: Directory\n");
+            printf("linux.txt: Directory\n");
             break;
         case S_IFREG:
-            printf("ch3_3.c: Regular File\n");
+            printf("linux.txt: Regular File\n");
             break;
     }
 }

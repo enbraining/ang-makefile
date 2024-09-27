@@ -6,18 +6,18 @@
 int main(){
     struct stat statbuf;
 
-    printf("1. stat : ch3_10.c ---\n");
-    stat("ch3_10.c", &statbuf);
-    printf("ch3_10.c : Link Count = %d\n", (int) statbuf.st_nlink);
-    printf("ch3_10.c : Inode = %d\n", (int) statbuf.st_ino);
+    printf("1. stat : linux.txt ---\n");
+    stat("linux.txt", &statbuf);
+    printf("linux.txt : Link Count = %d\n", (int) statbuf.st_nlink);
+    printf("linux.txt : Inode = %d\n", (int) statbuf.st_ino);
 
-    printf("2. stat : ch3_10.sym ---\n");
-    stat("ch3_10.sym", &statbuf);
-    printf("ch3_10.sym : Link Count = %d\n", (int) statbuf.st_nlink);
-    printf("ch3_10.sym : Inode = %d\n", (int) statbuf.st_ino);
+    printf("2. stat : linux.sym ---\n");
+    stat("linux.sym", &statbuf);
+    printf("linux.sym : Link Count = %d\n", (int) statbuf.st_nlink);
+    printf("linux.sym : Inode = %d\n", (int) statbuf.st_ino);
 
-    printf("3. stat : ch3_10.sym ---\n");
-    lstat("ch3_10.sym", &statbuf);
-    printf("ch3_10.sym : Link Count = %d\n", (int) statbuf.st_nlink);
-    printf("ch3_10.sym : Inode = %d\n", (int) statbuf.st_ino);
+    printf("3. stat : linux.sym ---\n");
+    lstat("linux.sym", &statbuf);
+    printf("linux.sym : Link Count = %d\n", (int) statbuf.st_nlink);
+    printf("linux.sym : Inode = %d\n", (int) statbuf.st_ino);
 }

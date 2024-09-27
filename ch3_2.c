@@ -9,9 +9,9 @@ int main(){
     int fd;
     struct stat statbuf;
 
-    fd = open("ch3_2.c", O_RDONLY);
+    fd = open("linux.txt", O_RDONLY);
     if(fd == -1){
-        perror("open: ch3_2.c");
+        perror("open: linux.txt");
         exit(1);
     }
 

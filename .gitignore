@@ -3,3 +3,6 @@
 han
 bit
 hanbit
+*.sym
+*.ln
+*.swp

@@ -6,11 +6,11 @@
 int main(){
     struct stat statbuf;
 
-    stat("ch3_8.c", &statbuf);
+    stat("linux.txt", &statbuf);
     printf("Before Link Count = %d\n", (int) statbuf.st_nlink);
 
-    link("ch3_8.c", "ch3_8.ln");
+    link("linux.txt", "linux.ln");
 
-    stat("ch3_8.c", &statbuf);
+    stat("linux.txt", &statbuf);
     printf("After Link Count = %d\n", (int) statbuf.st_nlink);
 }

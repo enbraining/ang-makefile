@@ -10,10 +10,10 @@ int main(){
     if(access("linux.bak", F_OK) == -1 && errno == ENOENT)
         printf("linux.bak: File not exist.\n");
 
-    perm = access("ch3_6.c", R_OK);
+    perm = access("linux.txt", R_OK);
 
     if(perm == 0)
-        printf("ch3_6.c: Read permission is permmitted.\n");
+        printf("linux.txt: Read permission is permmitted.\n");
     else if(perm == -1 && errno == EACCES)
-        printf("ch3_6.c: Read permission is not permmitted");
+        printf("linux.txt: Read permission is not permmitted");
 }
