@@ -16,7 +16,7 @@ int main(){
     }
 
     while(fgets(buf, BUFSIZ, rfp) != NULL){
-        fputc(buf, wfp);
+        fputs(buf, wfp);
     }
 
     fclose(rfp);
