@@ -15,8 +15,8 @@ int main(){
         exit(1);
     }
 
-    while((c = fgetc(rfp)) != EOF){
-        fputc(c, wfp);
+    while(fgets(buf, BUFSIZ, rfp) != NULL){
+        fputc(buf, wfp);
     }
 
     fclose(rfp);
